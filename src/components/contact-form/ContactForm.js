@@ -104,7 +104,7 @@ export default function ContactForm({ sectionId }) {
     return (
         <div id={sectionId}>
             <FormContainer>
-                <Typography variant="h5" gutterBottom>Commission Request Form</Typography>
+                <Typography variant="h5" gutterBottom>Heart City Support Form</Typography>
                 <StyledForm onSubmit={onSubmit} ref={formRef}>
                     <TextField
                         label="Name"
