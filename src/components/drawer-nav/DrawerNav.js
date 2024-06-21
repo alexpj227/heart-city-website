@@ -76,7 +76,9 @@ export default function DrawerNav({ open, setOpen, selectedItem, handleScrollTo 
                     '& .MuiDrawer-paper': {
                         width: DRAWER_WIDTH,
                         boxSizing: 'border-box',
-                        backgroundColor: '#FF69B4',
+                        backgroundColor: 'hotpink',
+                        backgroundImage: 'radial-gradient(white 20%, transparent 20%)',
+                        backgroundSize: '40px 40px',
                         right: 0, // Adjusted to align with the right edge of the screen
                     },
                 }}
