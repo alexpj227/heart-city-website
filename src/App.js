@@ -16,8 +16,8 @@ import ScrollToTop from './components/scroll-to-top/ScrollTopTop';
 import Blog from './pages/blog/Blog';
 
 
-export const HOME_URL = 'home';
-export const BLOG_URL = 'blog';
+export const HOME_URL = '/';
+export const BLOG_URL = '/blog';
 export const CONTACT_ID = 'contact';
 
 function App() {
