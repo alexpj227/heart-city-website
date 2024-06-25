@@ -1,0 +1,5 @@
+.container {
+    background-color: hotpink;
+    background-image: radial-gradient(blue 20%, transparent 20%);
+    background-size: 40px 40px;
+}

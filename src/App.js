@@ -13,7 +13,11 @@ import styles from './App.module.css';
 import Layout from './components/layout/Layout';
 import { useState } from 'react';
 import ScrollToTop from './components/scroll-to-top/ScrollTopTop';
+import Blog from './pages/blog/Blog';
 
+
+export const HOME_URL = 'home';
+export const BLOG_URL = 'blog';
 export const CONTACT_ID = 'contact';
 
 function App() {
@@ -49,7 +53,8 @@ function App() {
           <ScrollToTop />
           <Layout selectedItem={selectedItem} handleScrollTo={handleScrollTo} />
             <Routes>
-              <Route path="/" element={<Home />} />
+              <Route path={BLOG_URL} element={<Blog />} />
+              <Route path={HOME_URL} element={<Home />} />
               <Route path="*" element={<Home />} />
             </Routes>
           </BrowserRouter>
