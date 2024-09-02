@@ -19,7 +19,8 @@ import MailIcon from '@mui/icons-material/Mail';
 import DrawerHeader from './DrawerHeader';
 import CreateIcon from '@mui/icons-material/Create';
 import EmailIcon from '@mui/icons-material/Email';
-import { CONTACT_ID } from '../../App';
+import { CONTACT_ID, HOME_URL } from '../../App';
+import { useNavigate } from 'react-router-dom';
 
 export const DRAWER_WIDTH = 240;
 
@@ -42,6 +43,7 @@ const AppBar = styled(MuiAppBar, {
 
 export default function DrawerNav({ open, setOpen, selectedItem, handleScrollTo }) {
     const theme = useTheme();
+    const navigate = useNavigate();
 
     const handleDrawerOpen = () => {
         setOpen(true);
@@ -55,7 +57,13 @@ export default function DrawerNav({ open, setOpen, selectedItem, handleScrollTo 
         <Box sx={{ display: 'flex' }}>
             <AppBar position="fixed" open={open}>
                 <Toolbar>
-                    <Typography style={{ fontStyle: 'italic', flexGrow: 1 }} variant="h6" noWrap component="div">
+                    <Typography 
+                        style={{ fontStyle: 'italic', flexGrow: 1, cursor: 'pointer' }} 
+                        variant="h6" 
+                        noWrap 
+                        component="div"
+                        onClick={() => navigate(HOME_URL)}
+                    >
                         Heart City
                     </Typography>
                     <IconButton

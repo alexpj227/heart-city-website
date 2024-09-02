@@ -4,6 +4,7 @@ import { useState } from "react";
 import { styled, useTheme } from '@mui/material/styles';
 import DrawerHeader from "../drawer-nav/DrawerHeader";
 import styles from './Layout.module.css';
+import Footer from "../footer/Footer";
 
 const Main = styled('main', {
     shouldForwardProp: (prop) => prop !== 'open'

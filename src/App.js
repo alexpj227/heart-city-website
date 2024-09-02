@@ -14,10 +14,14 @@ import Layout from './components/layout/Layout';
 import { useState } from 'react';
 import ScrollToTop from './components/scroll-to-top/ScrollTopTop';
 import Blog from './pages/blog/Blog';
+import Privacy from './pages/legal/privacy/Privacy';
+import Terms from './pages/legal/terms/Terms';
 
 
 export const HOME_URL = '/';
 export const BLOG_URL = '/blog';
+export const PRIVACY_URL = '/legal/privacy';
+export const TERMS_OF_USE_URL = '/legal/terms';
 export const CONTACT_ID = 'contact';
 
 function App() {
@@ -55,6 +59,8 @@ function App() {
             <Routes>
               <Route path={BLOG_URL} element={<Blog />} />
               <Route path={HOME_URL} element={<Home />} />
+              <Route path={PRIVACY_URL} element={<Privacy />} />
+              <Route path={TERMS_OF_USE_URL} element={<Terms />} />
               <Route path="*" element={<Home />} />
             </Routes>
           </BrowserRouter>
