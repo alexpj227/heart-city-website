@@ -2,6 +2,7 @@ import { useRef, useState } from "react";
 import { styled } from '@mui/material/styles';
 import { TextField, Button, Typography, CircularProgress } from "@mui/material";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
+import Footer from "../footer/Footer";
 
 const FormContainer = styled('div')(({ theme }) => ({
     maxWidth: '400px',

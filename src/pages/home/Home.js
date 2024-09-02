@@ -5,6 +5,7 @@ function Home() {
     return (
         <div>
             <ContactForm sectionId={'contact-form-id'}/>
+            <br />
             <Footer />
         </div>
     );
