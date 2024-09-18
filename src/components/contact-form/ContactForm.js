@@ -105,7 +105,9 @@ export default function ContactForm({ sectionId }) {
     return (
         <div id={sectionId}>
             <FormContainer>
-                <Typography variant="h5" gutterBottom>Heart City Support Form</Typography>
+                <Typography variant="h5" gutterBottom>
+                    Contact <span style={{ fontWeight: 100, fontFamily: 'Roboto' }}>Heart</span><span style={{ color: '#BF2520', fontWeight: 'bold' }}>City</span>
+                </Typography>
                 <StyledForm onSubmit={onSubmit} ref={formRef}>
                     <TextField
                         label="Name"

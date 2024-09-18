@@ -6,7 +6,7 @@ const Footer = () => {
     const currentYear = new Date().getFullYear();
     return (
         <footer className={styles.footer}>
-            <p>&copy; {currentYear} Heart City. All rights reserved.</p>
+            <p>&copy; {currentYear} HeartCity. All rights reserved.</p>
             <nav>
                 <a href={PRIVACY_URL}>Privacy Policy</a> | <a href={TERMS_OF_USE_URL}>Terms of Service</a>
             </nav>

@@ -64,7 +64,7 @@ export default function DrawerNav({ open, setOpen, selectedItem, handleScrollTo 
                         component="div"
                         onClick={() => navigate(HOME_URL)}
                     >
-                        Heart City
+                        HeartCity
                     </Typography>
                     <IconButton
                         color="inherit"

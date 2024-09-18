@@ -35,7 +35,7 @@ function App() {
     }
   });
 
-  // heart city red color: #BF2520
+  // heartcity red color: #BF2520
 
   function handleScrollTo(id, behavior = 'smooth') {
     setSelectedItem(id);
