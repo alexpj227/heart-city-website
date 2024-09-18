@@ -91,45 +91,46 @@ const SplashPage = () => {
                 </Box>
             {/* Features Section */}
             <Container sx={{ pt: 7, pb: 8 }}>
-                <Typography variant="h4" sx={{ mb: 4, textAlign: 'center' }}>
-                    Why You'll Love Our App
+    <Typography variant="h4" sx={{ mb: 4, textAlign: 'center' }}>
+        Why <span style={{fontWeight: 100, fontFamily: 'Roboto'}}>Heart</span><span style={{color: '#BF2520', fontWeight: 'bold'}}>City</span>?
+    </Typography>
+    <Grid container spacing={4}>
+        <Grid item xs={12} md={4}>
+            <Box sx={{ textAlign: 'center' }}>
+                <PhoneIphoneIcon fontSize="large" color="primary" />
+                <Typography variant="h6" sx={{ mt: 2 }}>
+                    Simple & Intuitive
                 </Typography>
-                <Grid container spacing={4}>
-                    <Grid item xs={12} md={4}>
-                        <Box sx={{ textAlign: 'center' }}>
-                            <PhoneIphoneIcon fontSize="large" color="primary" />
-                            <Typography variant="h6" sx={{ mt: 2 }}>
-                                Simple & Intuitive
-                            </Typography>
-                            <Typography variant="body1" sx={{ mt: 1 }}>
-                                Our app is designed with simplicity in mind. Easy to navigate, use, and master.
-                            </Typography>
-                        </Box>
-                    </Grid>
-                    <Grid item xs={12} md={4}>
-                        <Box sx={{ textAlign: 'center' }}>
-                            <PhoneIphoneIcon fontSize="large" color="primary" />
-                            <Typography variant="h6" sx={{ mt: 2 }}>
-                                Fast & Reliable
-                            </Typography>
-                            <Typography variant="body1" sx={{ mt: 1 }}>
-                                Experience fast load times and reliable functionality every time you use it.
-                            </Typography>
-                        </Box>
-                    </Grid>
-                    <Grid item xs={12} md={4}>
-                        <Box sx={{ textAlign: 'center' }}>
-                            <PhoneIphoneIcon fontSize="large" color="primary" />
-                            <Typography variant="h6" sx={{ mt: 2 }}>
-                                Always Connected
-                            </Typography>
-                            <Typography variant="body1" sx={{ mt: 1 }}>
-                                Stay connected to your tasks wherever you go, anytime you need.
-                            </Typography>
-                        </Box>
-                    </Grid>
-                </Grid>
-            </Container>
+                <Typography variant="body1" sx={{ mt: 1 }}>
+                    Our app makes finding volunteer opportunities in your community easy and stress-free. With a few taps, you can sign up for events that matter to you.
+                </Typography>
+            </Box>
+        </Grid>
+        <Grid item xs={12} md={4}>
+            <Box sx={{ textAlign: 'center' }}>
+                <PhoneIphoneIcon fontSize="large" color="primary" />
+                <Typography variant="h6" sx={{ mt: 2 }}>
+                    Fast & Reliable
+                </Typography>
+                <Typography variant="body1" sx={{ mt: 1 }}>
+                    Get real-time updates on new volunteer events and sign up instantly. Our app ensures you never miss a chance to make a difference in your community.
+                </Typography>
+            </Box>
+        </Grid>
+        <Grid item xs={12} md={4}>
+            <Box sx={{ textAlign: 'center' }}>
+                <PhoneIphoneIcon fontSize="large" color="primary" />
+                <Typography variant="h6" sx={{ mt: 2 }}>
+                    Always Connected
+                </Typography>
+                <Typography variant="body1" sx={{ mt: 1 }}>
+                    Stay in touch with fellow volunteers and event organizers. Our app keeps you informed and engaged with your community every step of the way.
+                </Typography>
+            </Box>
+        </Grid>
+    </Grid>
+</Container>
+
 
             {/* Footer */}
             <Box
