@@ -16,6 +16,7 @@ import ScrollToTop from './components/scroll-to-top/ScrollTopTop';
 import Blog from './pages/blog/Blog';
 import Privacy from './pages/legal/privacy/Privacy';
 import Terms from './pages/legal/terms/Terms';
+import SplashPage from './pages/splash-page/SplashPage';
 
 
 export const HOME_URL = '/';
@@ -55,13 +56,13 @@ function App() {
       <div className={styles.container}>
           <BrowserRouter>
           <ScrollToTop />
-          <Layout selectedItem={selectedItem} handleScrollTo={handleScrollTo} />
+          {/* <Layout selectedItem={selectedItem} handleScrollTo={handleScrollTo} /> */}
             <Routes>
               <Route path={BLOG_URL} element={<Blog />} />
-              <Route path={HOME_URL} element={<Home />} />
+              <Route path={HOME_URL} element={<SplashPage />} />
               <Route path={PRIVACY_URL} element={<Privacy />} />
               <Route path={TERMS_OF_USE_URL} element={<Terms />} />
-              <Route path="*" element={<Home />} />
+              <Route path="*" element={<SplashPage />} />
             </Routes>
           </BrowserRouter>
       </div>
