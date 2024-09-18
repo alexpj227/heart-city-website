@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Container, Box, Typography, Button, Grid, AppBar, Toolbar, Paper } from '@mui/material';
 import AndroidIcon from '@mui/icons-material/Android';
 import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone';
@@ -9,7 +9,6 @@ import appStoreImg from '../../assets/img/download-on-the-app-store.svg';
 import googleStoreImg from '../../assets/img/GetItOnGooglePlay_Badge_Web_color_English.png';
 import { HOME_URL, PRIVACY_URL, TERMS_OF_USE_URL } from '../../App';
 import styles from './SplashPage.module.css';
-import heartCityHeartImg from '../../assets/img/heart-city-heart.png';
 import logo from '../../assets/img/logo.png';
 import { useNavigate } from 'react-router-dom';
 import bannerImg from '../../assets/img/banner4.png';
@@ -19,9 +18,27 @@ const SplashPage = () => {
     const currentYear = new Date().getFullYear();
     const navigate = useNavigate();
 
+    // Create references for scrolling
+    const testimonialsRef = useRef(null);
+    const contactRef = useRef(null);
+    const getAppRef = useRef(null);
+
     function handleHomeClick() {
         navigate(HOME_URL);
     }
+
+    // Handlers for scrolling
+    const scrollToTestimonials = () => {
+        testimonialsRef.current.scrollIntoView({ behavior: 'smooth' });
+    };
+
+    const scrollToContact = () => {
+        contactRef.current.scrollIntoView({ behavior: 'smooth' });
+    };
+
+    const scrollToGetApp = () => {
+        getAppRef.current.scrollIntoView({ behavior: 'smooth' });
+    };
 
     // Carousel settings for react-slick
     const settings = {
@@ -43,7 +60,9 @@ const SplashPage = () => {
                     <Typography onClick={handleHomeClick} variant="h6" component="div" sx={{ flexGrow: 1, cursor: 'pointer', marginTop: '10px' }}>
                         <img className={styles.heartLogo} src={logo} alt="Logo" />
                     </Typography>
-                    <Button sx={{ marginTop: '-10px' }} color="inherit">Sign In</Button>
+                    <Button onClick={scrollToGetApp} color="inherit">Get the App</Button>
+                    <Button onClick={scrollToTestimonials} color="inherit">Testimonials</Button>
+                    <Button onClick={scrollToContact} color="inherit">Contact</Button>
                 </Toolbar>
             </AppBar>
 
@@ -73,6 +92,7 @@ const SplashPage = () => {
 
             {/* Download Buttons */}
             <Box
+                ref={getAppRef}
                 sx={{
                     display: 'flex',
                     alignItems: 'center',
@@ -140,7 +160,7 @@ const SplashPage = () => {
             </Container>
 
             {/* Testimonials Section */}
-            <Container sx={{ pt: 7, pb: 8, backgroundColor: '#f9f9f9' }}>
+            <Container ref={testimonialsRef} sx={{ pt: 7, pb: 8, backgroundColor: '#f9f9f9' }}>
                 <Typography variant="h4" sx={{ mb: 4, textAlign: 'center' }}>
                     What Our Users Say
                 </Typography>
@@ -198,13 +218,16 @@ const SplashPage = () => {
                 </Slider>
             </Container>
 
+            {/* Contact Section */}
             <Box
+                ref={contactRef}
                 sx={{
                     py: 5,
                 }}
             >
                 <ContactForm />
             </Box>
+
             {/* Footer */}
             <Box
                 sx={{
