@@ -12,7 +12,7 @@ import styles from './SplashPage.module.css';
 import heartCityHeartImg from '../../assets/img/heart-city-heart.png';
 import logo from '../../assets/img/logo.png';
 import { useNavigate } from 'react-router-dom';
-import bannerImg from '../../assets/img/banner2.png';
+import bannerImg from '../../assets/img/banner4.png';
 import ContactForm from '../../components/contact-form/ContactForm';
 
 const SplashPage = () => {
