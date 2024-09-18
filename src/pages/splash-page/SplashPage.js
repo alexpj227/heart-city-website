@@ -4,19 +4,36 @@ import AndroidIcon from '@mui/icons-material/Android';
 import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone';
 import appStoreImg from '../../assets/img/download-on-the-app-store.svg';
 import googleStoreImg from '../../assets/img/GetItOnGooglePlay_Badge_Web_color_English.png';
-import { PRIVACY_URL, TERMS_OF_USE_URL } from '../../App';
+import { HOME_URL, PRIVACY_URL, TERMS_OF_USE_URL } from '../../App';
+import styles from './SplashPage.module.css';
+import heartCityHeartImg from '../../assets/img/heart-city-heart.png';
+// import logo from '../../assets/logo.png';
+import logo from '../../assets/img/logo.png';
+import { useNavigate } from 'react-router-dom';
+import bannerImg from '../../assets/img/banner2.png';
 
 const SplashPage = () => {
     const currentYear = new Date().getFullYear();
+    const navigate = useNavigate();
+    function handleHomeClick() {
+        navigate(HOME_URL);
+    }
     return (
         <div>
             {/* Navbar */}
             <AppBar position="static" color="transparent" elevation={0}>
                 <Toolbar>
-                    <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                        HeartCity
+                    <Typography onClick={handleHomeClick} variant="h6" component="div" sx={{ flexGrow: 1, cursor: 'pointer', marginTop: '10px' }}>
+                        <img className={styles.heartLogo} src={logo} />
+                        {/* <span className={styles.logo}>
+                            Heart
+                        </span>
+                        <span className={styles.city}>
+                            City
+                        </span> */}
+                        {/* Heart<span style={{fontFamily: 'Arial, sans-serif', fontSize: '32px', color: '#BF2522', fontWeight: 'bold'}}>City</span> */}
                     </Typography>
-                    <Button color="inherit">Sign In</Button>
+                    <Button sx={{marginTop: '-10px'}} color="inherit">Sign In</Button>
                 </Toolbar>
             </AppBar>
 
@@ -28,20 +45,32 @@ const SplashPage = () => {
                     alignItems: 'center',
                     justifyContent: 'center',
                     height: '100vh',
-                    backgroundImage: 'url(https://source.unsplash.com/random)', // Replace with your background image
+                    // width: '100vw',
+                    backgroundImage: `url(${bannerImg})`, // Replace with your background image
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
+                    borderRadius: '20px',
                     color: '#fff',
                     textAlign: 'center',
                 }}
             >
                 <Typography variant="h2" sx={{ fontWeight: 'bold', mb: 2 }}>
-                    Your App, Your World
+                    {/* Your App, Your World */}
                 </Typography>
                 <Typography variant="h6" sx={{ mb: 4 }}>
-                    Discover the easiest way to manage your daily tasks and life.
+                    {/* Discover the easiest way to manage your daily tasks and life. */}
                 </Typography>
-                <Box>
+                
+            </Box>
+            <Box
+                sx={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    textAlign: 'center',
+                    pt: 5,
+                }}
+            >
                     {/* Apple Store Button */}
                     <a href="https://www.apple.com/app-store/" target="_blank" rel="noopener noreferrer">
                         <img
@@ -60,10 +89,8 @@ const SplashPage = () => {
                         />
                     </a>
                 </Box>
-            </Box>
-
             {/* Features Section */}
-            <Container sx={{ py: 8 }}>
+            <Container sx={{ pt: 7, pb: 8 }}>
                 <Typography variant="h4" sx={{ mb: 4, textAlign: 'center' }}>
                     Why You'll Love Our App
                 </Typography>

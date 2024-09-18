@@ -1,0 +1,18 @@
+.logo {
+    font-family: Lucida Bright, sans-serif;
+    font-weight: 1;
+    font-size: 32px;
+    /* font-weight: bold; */
+}
+.city {
+    font-size: 32px;
+    font-weight: bold;
+    color: #BF2522; /* The color of "City" */
+}
+.heartLogo {
+    /* width: 28px; */
+    /* width: 200px; */
+}
+/* https://mockuphone.com/model/iphone-15/ */
+
+/* red: #BF2520 rgb(191,37,32) */
