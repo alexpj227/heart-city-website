@@ -137,7 +137,7 @@ export default function ContactForm({ sectionId }) {
                         helperText={messageError ? "Message field cannot be blank." : ""}
                     />
                     <HCaptcha
-                        theme={"dark"}
+                        theme={"light"}
                         sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"
                         onVerify={onHCaptchaChange}
                     />
